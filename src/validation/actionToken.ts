@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { ActionTokenAction } from '../types/actionToken';
+import { ActionTokenAction } from '@/types/actionToken';
 
 export const actionTokenPayloadSchema = z.object({
   visitorId: z.string().min(1, 'visitorId requis'),

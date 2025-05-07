@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { User, UserContextType } from '../types/user';
+import { User, UserContextType } from '@/types/user';
 
 const VISITOR_ID_COOKIE = 'visitor_id';
 const VISITOR_ID_COOKIE_MAX_AGE = 60 * 60 * 24 * 365;

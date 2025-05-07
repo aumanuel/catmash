@@ -1,4 +1,4 @@
-import { ActionTokenAction } from '../../types/actionToken';
+import { ActionTokenAction } from '@/types/actionToken';
 
 export interface AuthorizeActionTokenResponse {
   token: string;

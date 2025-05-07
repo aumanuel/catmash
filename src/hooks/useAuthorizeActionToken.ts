@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
-import { ActionTokenAction } from '../types/actionToken';
-import { authorizeActionToken, AuthorizeActionTokenResponse } from '../services/client/action-token';
+import { ActionTokenAction } from '@/types/actionToken';
+import { authorizeActionToken, AuthorizeActionTokenResponse } from '@/services/client/action-token';
 
 interface UseAuthorizeActionTokenResult {
   token: string | null;

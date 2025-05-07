@@ -44,91 +44,84 @@ CatMash est une mini-application web permettant de trouver le chat le plus migno
 
 L'architecture du projet CatMash est pensée pour séparer clairement les responsabilités et faciliter la maintenabilité. Voici la structure principale :
 
-```
 catmash/
-├── src/
-│   ├── app/                      # Routing Next.js & API
-│   │   ├── favicon.ico
-│   │   ├── globals.css           # Styles globaux
-│   │   ├── layout.tsx            # Layout racine
-│   │   ├── page.tsx              # Page d'accueil (/)
-│   │   ├── demo/
-│   │   │   └── page.tsx          # Exemple de page (/demo)
-│   │   └── api/                  # Endpoints API (Node.js)
-│   │       ├── authorize-action-token/
-│   │       │   └── route.ts
-│   │       │   └── __tests__/
-│   │       │       └── route.test.ts
-│   │       └── generic-data/
-│   │           ├── route.ts
-│   │           └── __tests__/
-│   │               └── route.test.ts
-│   │           └── [id]/
-│   │               └── route.ts
-│   │               └── __tests__/
-│   │                   └── route.test.ts
-│   ├── components/
-│   │   ├── features/             # Composants métier
-│   │   │   ├── Navigation/
-│   │   │   │   ├── Footer.tsx
-│   │   │   │   └── Header.tsx
-│   │   │   └── generic-data/
-│   │   │       ├── DataList.tsx
-│   │   │       ├── DataForm.tsx
-│   │   │       └── __tests__/
-│   │   │           ├── DataList.test.tsx
-│   │   │           └── DataForm.test.tsx
-│   │   └── ui/                   # Composants réutilisables
-│   │       ├── Button.tsx
-│   │       ├── Card.tsx
-│   │       └── Modal.tsx
-│   ├── config/                   # Configuration centralisée
-│   │   ├── actionToken.ts
-│   │   └── firebaseAdmin.ts
-│   ├── contexts/                 # Contexts React globaux
-│   │   ├── Providers.tsx
-│   │   └── UserContext.tsx
-│   ├── hooks/                    # Hooks React globaux
-│   │   ├── useAuthorizeActionToken.ts
-│   │   ├── useGenericData.ts
-│   │   └── __tests__/
-│   │       ├── useAuthorizeActionToken.test.tsx
-│   │       └── useGenericData.test.tsx
-│   ├── middleware/               # Middlewares Next.js & utilitaires
-│   │   ├── requireActionToken.ts
-│   │   └── __tests__/
-│   │       └── requireActionToken.test.ts
-│   ├── services/                 # Services client (HTTP) & serveur (DB, logique)
-│   │   ├── client/
-│   │   │   ├── action-token.ts
-│   │   │   ├── generic-data.ts
-│   │   │   ├── http.ts
-│   │   │   └── __tests__/
-│   │   │       ├── generic-data.test.ts
-│   │   │       └── action-token.test.ts
-│   │   └── server/
-│   │       └── generic-data.ts
-│   │       └── __tests__/
-│   │           └── generic-data.test.ts
-│   ├── types/                    # Types TypeScript globaux
-│   │   ├── actionToken.ts
-│   │   ├── generic-data.ts
-│   │   └── user.ts
-│   ├── utils/                    # Fonctions utilitaires
-│   │   ├── actionToken.ts
-│   │   ├── constants.ts
-│   │   └── serialize.ts
-│   └── validation/               # Schémas de validation (Zod)
-│       ├── actionToken.ts
-│       ├── generic-data.ts
-│       └── __tests__/
-│           ├── actionToken.test.ts
-│           └── generic-data.test.ts
-├── jest.config.ts                # Configuration Jest
-├── jest.setup.ts                 # Setup tests
-├── tsconfig.json                 # Configuration TypeScript
-└── ...                           # Autres fichiers de configuration et scripts
-```
+├── app
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── api
+│   │   ├── authorize-action-token
+│   │   │   ├── route.ts
+│   │   │   └── __tests__
+│   │   │       └── route.test.ts
+│   │   ├── cats
+│   │   │   ├── route.ts
+│   │   │   └── match
+│   │   │       ├── route.ts
+│   │   │       └── vote
+│   │   │           └── route.ts
+│   │   └── stats
+│   │       └── total-matches
+│   │           └── route.ts
+│   └── classement
+│       └── page.tsx
+├── components
+│   ├── experience
+│   │   └── PageTransitionOverlay.tsx
+│   ├── features
+│   │   └── Navigation
+│   │       ├── BottomNavigationTongue.tsx
+│   │       ├── Footer.tsx
+│   │       └── Header.tsx
+│   └── ui
+│       └── ArrowUpIcon.tsx
+├── config
+│   ├── actionToken.ts
+│   └── firebaseAdmin.ts
+├── contexts
+│   ├── PageTransitionContext.tsx
+│   ├── Providers.tsx
+│   └── UserContext.tsx
+├── hooks
+│   ├── useAuthorizeActionToken.ts
+│   ├── useCatMatch.ts
+│   ├── useCats.ts
+│   ├── useTotalMatches.ts
+│   ├── useVoteForMatch.ts
+│   └── __tests__
+│       ├── useAuthorizeActionToken.test.tsx
+│       └── useCats.test.tsx
+├── middleware
+│   └── requireActionToken.ts
+├── services
+│   ├── client
+│   │   ├── action-token.ts
+│   │   ├── cats.ts
+│   │   ├── http.ts
+│   │   └── __tests__
+│   │       ├── action-token.test.ts
+│   │       └── cats.test.ts
+│   └── server
+│       ├── cats.ts
+│       ├── stats.ts
+│       ├── votes.ts
+│       └── __tests__
+│           └── cats.test.ts
+├── types
+│   ├── actionToken.ts
+│   ├── cat.ts
+│   └── user.ts
+├── utils
+│   ├── actionToken.ts
+│   ├── constants.ts
+│   ├── cookies.ts
+│   └── serialize.ts
+└── validation
+    ├── actionToken.ts
+    ├── cat.ts
+    └── __tests__
+        └── actionToken.test.ts
 
 Chaque dossier est organisé pour séparer clairement les responsabilités (API, UI, logique métier, configuration, etc.), facilitant ainsi la maintenance et l'évolution du projet.
 

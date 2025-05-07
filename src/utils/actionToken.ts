@@ -1,6 +1,6 @@
 import { SignJWT, jwtVerify, JWTPayload } from 'jose';
-import { ActionTokenPayload, ActionTokenOptions } from '../types/actionToken';
-import { actionTokenPayloadSchema } from '../validation/actionToken';
+import { ActionTokenPayload, ActionTokenOptions } from '@/types/actionToken';
+import { actionTokenPayloadSchema } from '@/validation/actionToken';
 import { ACTION_TOKEN_SECRET, ACTION_TOKEN_DEFAULT_EXPIRES_IN } from '../config/actionToken';
 
 const encoder = new TextEncoder();

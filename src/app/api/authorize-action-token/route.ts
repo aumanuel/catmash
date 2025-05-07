@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import { signActionToken } from '../../../utils/actionToken';
-import { ACTION_TOKEN_DEFAULT_EXPIRES_IN } from '../../../config/actionToken';
-import { ACTION_TOKEN_ACTIONS } from '../../../types/actionToken';
+import { signActionToken } from '@/utils/actionToken';
+import { ACTION_TOKEN_DEFAULT_EXPIRES_IN } from '@/config/actionToken';
+import { ACTION_TOKEN_ACTIONS } from '@/types/actionToken';
 
 const authorizeActionSchema = z.object({
   action: z.enum(ACTION_TOKEN_ACTIONS),
