@@ -3,9 +3,9 @@
 ## 1. Structure et navigation
 
 - [x] Adapter le fichier README pour qu'il corresponde au projet
-- [ ] Initialiser le projet avec Next.js, TypeScript et, si nécessaire, Tailwind CSS
-- [ ] Concevoir et intégrer le logo du projet
-- [ ] Personnaliser les métadonnées, l'en-tête, le pied de page et le favicon
+- [x] Initialiser le projet en local et sur Vercel avec Next.js, TypeScript, et Tailwind CSS
+- [x] Concevoir et intégrer le logo du projet
+- [ ] Personnaliser l'en-tête, le pied de page et le favicon
 - [ ] Développer les deux pages principales :
   - Page de vote
   - Page de résultats
