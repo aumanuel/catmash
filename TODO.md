@@ -24,16 +24,16 @@
 
 ## 4. Page de vote
 
-- [ ] Demander un « match » au backend :
-  - [ ] Le backend sélectionne deux chats, génère un jeton sécurisé (incluant les deux chats et la requête du front)
-  - [ ] Le backend renvoie le jeton et les informations des deux chats au frontend
-- [ ] Afficher les deux chats à l'utilisateur (image et nom/ID)
-- [ ] Lors d'un vote :
-  - [ ] Envoyer au backend : le jeton reçu, l'identifiant du chat gagnant, l'identifiant du chat perdant et le visitorId (stocké en cookie)
-  - [ ] Le backend vérifie le jeton, met à jour les scores Elo des deux chats, enregistre le vote (et empêche de voter à nouveau pour le même match)
-  - [ ] Rafraîchir les chats proposés au vote
-  - [ ] Mettre à jour le compteur de matchs effectués
-  - [ ] Garantir l'unicité du vote et éviter qu'un même match soit reproposé ou recompté
+- [x] Demander un « match » au backend :
+  - [x] Le backend sélectionne deux chats, génère un jeton sécurisé (incluant les deux chats et la requête du front)
+  - [x] Le backend renvoie le jeton et les informations des deux chats au frontend
+- [x] Afficher les deux chats à l'utilisateur (image et nom/ID)
+- [x] Lors d'un vote :
+  - [x] Envoyer au backend : le jeton reçu, l'identifiant du chat gagnant, l'identifiant du chat perdant et le visitorId (stocké en cookie)
+  - [x] Le backend vérifie le jeton, met à jour les scores Elo des deux chats, enregistre le vote (et empêche de voter à nouveau pour le même match)
+  - [x] Rafraîchir les chats proposés au vote
+  - [x] Mettre à jour le compteur de matchs effectués
+  - [x] Garantir l'unicité du vote et éviter qu'un même match soit reproposé ou recompté
 
 ## 5. Finalisation
 

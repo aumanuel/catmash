@@ -6,7 +6,6 @@ import { catsArraySchema } from '@/validation/cat';
 export async function GET(req: NextRequest) {
   try {
     const cats = await getAllCats();
-    // Validation Zod sur le tableau de chats
     const parsed = catsArraySchema.safeParse(cats);
     if (!parsed.success) {
       return NextResponse.json({ error: 'Invalid cats data', details: parsed.error.issues }, { status: 500 });

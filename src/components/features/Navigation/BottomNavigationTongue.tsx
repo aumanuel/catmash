@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import ArrowUpIcon from '../../ui/ArrowUpIcon';
 import { usePageTransition } from '@/contexts/PageTransitionContext';
+import { useTotalMatches } from '@/hooks/useTotalMatches';
 
 interface BottomNavigationTongueProps {
   href: string;
@@ -20,7 +21,7 @@ export default function BottomNavigationTongue({ href, label, sublabel }: Bottom
     pageTransition = null;
   }
 
-  const totalMatches = 12;
+  const { data: totalMatches } = useTotalMatches();
 
   let displaySublabel = sublabel;
   if (typeof sublabel === 'string' && /\d+/.test(sublabel)) {
