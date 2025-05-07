@@ -1,6 +1,6 @@
-# fast-start-web
+# CatMash
 
-Un starter kit full-stack moderne, développé à titre personnel, pour lancer rapidement des applications web avec Next.js, React, API Node.js et Firebase.
+CatMash est une application web qui permet de voter pour le chat le plus mignon, inspirée de l'UX de Facemash. Les utilisateurs peuvent voter entre deux chats affichés aléatoirement, et consulter le classement général des chats selon leur score.
 
 ## Sommaire
 
@@ -14,30 +14,26 @@ Un starter kit full-stack moderne, développé à titre personnel, pour lancer r
 - [Scripts disponibles](#scripts-disponibles)
 - [Tests & Qualité](#tests--qualité)
 - [Déploiement](#déploiement)
-- [Licence](#licence)
 
 ---
 
 ## Présentation
 
-Ce starter est conçu pour accélérer la création d'applications web, en combinant une architecture moderne, des outils de qualité, et une configuration prête à l'emploi. Il sert de base pour démarrer rapidement des projets, sans perdre de temps sur le code ou la configuration initiale.
-
+CatMash est une mini-application web permettant de trouver le chat le plus mignon grâce aux votes des utilisateurs. L'application s'appuie sur les données publiques de [l'API cats.json](https://data.latelier.co/cats.json) et propose une expérience utilisateur inspirée de Facemash.
 
 ## Fonctionnalités
 
-- **Next.js App Router** avec **TypeScript**
-- **React Server Components**
-- **API routes** (Node.js, Edge Runtime support)
-- **Firebase SDK** v10+ (Auth, Firestore, Storage)
-- **Tailwind CSS** pour le styling
-- **ESLint**, **Prettier**, **Husky**, **lint-staged**
-- **Jest** + **React Testing Library** pour les tests front et back
+- Affichage de deux chats aléatoires pour voter pour le plus mignon
+- Mise à jour du score des chats à chaque vote
+- Page de classement de tous les chats selon leur score
+- Navigation simple entre la page de vote et le classement
+- Responsive et utilisable sur Google Chrome
+- Déploiement public et code source disponible sur GitHub
 
 ## Stack technique
 
 - **Next.js** (App Router, SSR, API)
 - **React** (Server/Client Components)
-- **Firebase** (Admin SDK côté serveur)
 - **TypeScript** (Typage strict)
 - **Tailwind CSS** (UI rapide et moderne)
 - **Jest** (tests unifiés front/back)
@@ -46,10 +42,10 @@ Ce starter est conçu pour accélérer la création d'applications web, en combi
 
 ## Structure du projet
 
-L'architecture du projet est pensée pour séparer clairement les responsabilités et faciliter la maintenabilité. Voici la structure principale :
+L'architecture du projet CatMash est pensée pour séparer clairement les responsabilités et faciliter la maintenabilité. Voici la structure principale :
 
 ```
-fast-start-web/
+catmash/
 ├── src/
 │   ├── app/                      # Routing Next.js & API
 │   │   ├── favicon.ico
@@ -145,8 +141,8 @@ Chaque dossier est organisé pour séparer clairement les responsabilités (API,
 
 1. Clonez le dépôt (accès privé) :
    ```bash
-   git clone git@github.com:aumanuel/fast-start-web.git
-   cd fast-start-web
+   git clone git@github.com:aumanuel/catmash.git
+   cd catmash
    ```
 2. Installez les dépendances :
    ```bash
