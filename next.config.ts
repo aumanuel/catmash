@@ -1,12 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // TEMPORARY: Ignore ESLint errors during builds to unblock deployment.
-  // TODO: Remove this and fix all lint errors for production readiness.
   eslint: {
     ignoreDuringBuilds: true,
   },
-  /* config options here */
+  images: {
+    domains: [
+      "24.media.tumblr.com",
+      "25.media.tumblr.com",
+      "27.media.tumblr.com",
+      "28.media.tumblr.com",
+      "29.media.tumblr.com",
+      "30.media.tumblr.com",
+      "64.media.tumblr.com",
+    ],
+  },
 };
 
 export default nextConfig;

@@ -15,4 +15,8 @@ export function serializeGenericData(data: GenericData): any {
 
 export function serializeGenericDataArray(items: GenericData[]): any[] {
   return items.map(serializeGenericData);
+}
+
+export function serializeCatArray(items: any[]): any[] {
+  return items.map(item => ({ ...item }));
 } 

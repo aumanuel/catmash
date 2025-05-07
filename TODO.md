@@ -19,8 +19,8 @@
 
 ## 3. Page de résultats
 
-- [ ] Récupérer le classement des chats depuis le backend (triés par score Elo décroissant)
-- [ ] Afficher la liste des chats triés (image, nom/ID, score)
+- [x] Récupérer le classement des chats depuis le backend (triés par score Elo décroissant)
+- [x] Afficher la liste des chats triés (image, nom/ID, score)
 
 ## 4. Page de vote
 

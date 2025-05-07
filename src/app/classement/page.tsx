@@ -1,14 +1,10 @@
+'use client';
 import Image from 'next/image';
 import BottomNavigationTongue from '@/components/features/Navigation/BottomNavigationTongue';
 import { Cat } from '@/types/cat';
+import Header from '@/components/features/Navigation/Header';
+import { useCats } from '@/hooks/useCats';
 
-const cats: Cat[] = Array.from({ length: 100 }, (_, i) => ({
-  id: `cat-${i + 1}`,
-  name: `Chat ${i + 1}`,
-  score: Math.floor(Math.random() * 10000),
-  url: '/random-cat.jpg',
-  match: Math.floor(Math.random() * 100),
-})).sort((a, b) => b.score - a.score);
 
 function Podium({ cats }: { cats: Cat[] }) {
     return (
@@ -70,19 +66,26 @@ function Podium({ cats }: { cats: Cat[] }) {
   }
   
   export default function ClassementPage() {
+    const { cats, loading, error } = useCats();
+  
     return (
-      <main className="pb-32 pt-8 bg-gray-50 min-h-screen">
-        {cats && (
-          <>
-            <Podium cats={cats.slice(0, 3)} />
-            <CatGrid cats={cats.slice(3)} />
-          </>
-        )}
-        <BottomNavigationTongue
-          href="/"
-          label="Revenir au vote"
-          sublabel="12 matchs joués"
-        />
-      </main>
+      <>
+        <Header />
+        <main className="pb-32 pt-8 bg-gray-50 min-h-screen">
+          {loading && <div className="text-center text-lg py-8">Chargement du classement...</div>}
+          {error && <div className="text-center text-red-500 py-8">Erreur : {error}</div>}
+          {cats && (
+            <>
+              <Podium cats={cats.slice(0, 3)} />
+              <CatGrid cats={cats.slice(3)} />
+            </>
+          )}
+          <BottomNavigationTongue
+            href="/"
+            label="Revenir au vote"
+            sublabel="12 matchs joués"
+          />
+        </main>
+      </>
     );
   } 
