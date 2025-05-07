@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/features/Navigation/Footer";
-import Header from "@/components/features/Navigation/Header";
 import Providers from "@/contexts/Providers";
+import PageTransitionOverlay from "@/components/experience/PageTransitionOverlay";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fast Start React Node Next Vercel Firebase",
-  description: "A professional full-stack starter kit with Next.js, React, Node.js API routes and Firebase",
+  title: "CatMash",
+  description: "Votez pour le chat le plus mignon, inspiré de Facemash. Découvrez le classement des chats selon leur score.",
 };
 
 export default function RootLayout({
@@ -22,9 +22,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-grow">
+            <main className="flex-grow relative">
               {children}
+              <PageTransitionOverlay />
             </main>
             <Footer />
           </div>

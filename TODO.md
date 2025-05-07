@@ -10,12 +10,12 @@
   - Page de vote
   - Page de résultats
 - [x] Mettre en place une navigation persistante en bas de page (onglets)
-  - [ ] Ajouter une animation de transition lors du changement d'onglet (l'onglet actif se soulève et entraîne la page suivante, l'ancienne reste visible brièvement)
+  - [x] Ajouter une animation de transition lors du changement d'onglet (l'onglet actif se soulève et entraîne la page suivante, l'ancienne reste visible brièvement)
 
 ## 2. Gestion des données des chats
 
-- [ ] Définir la structure de la base de données pour stocker les informations des chats (id, URL, score, etc.)
-- [ ] Insérer les données des chats dans la base de données Firebase
+- [x] Définir la structure de la base de données pour stocker les informations des chats (id, URL, score, etc.)
+- [x] Insérer les données des chats dans la base de données Firebase
 
 ## 3. Page de résultats
 
