@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const Header: React.FC = () => {
   return (
-    <header className="bg-white h-[100px]">
+    <header className="bg-gray-50 h-[100px]">
       <div className="flex justify-center items-center w-full">
         <Image
           src="/logo.svg"

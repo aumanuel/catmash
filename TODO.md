@@ -5,11 +5,11 @@
 - [x] Adapter le fichier README pour qu'il corresponde au projet
 - [x] Initialiser le projet en local et sur Vercel avec Next.js, TypeScript, et Tailwind CSS
 - [x] Concevoir et intégrer le logo du projet
-- [ ] Personnaliser l'en-tête, le pied de page et le favicon
-- [ ] Développer les deux pages principales :
+- [x] Personnaliser l'en-tête, le pied de page et le favicon
+- [x] Développer les deux pages principales :
   - Page de vote
   - Page de résultats
-- [ ] Mettre en place une navigation persistante en bas de page (onglets)
+- [x] Mettre en place une navigation persistante en bas de page (onglets)
   - [ ] Ajouter une animation de transition lors du changement d'onglet (l'onglet actif se soulève et entraîne la page suivante, l'ancienne reste visible brièvement)
 
 ## 2. Gestion des données des chats
