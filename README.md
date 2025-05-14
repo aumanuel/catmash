@@ -44,6 +44,7 @@ CatMash est une mini-application web permettant de trouver le chat le plus migno
 
 L'architecture du projet CatMash est pensée pour séparer clairement les responsabilités et faciliter la maintenabilité. Voici la structure principale :
 
+```
 catmash/
 ├── app
 │   ├── favicon.ico
@@ -122,6 +123,7 @@ catmash/
     ├── cat.ts
     └── __tests__
         └── actionToken.test.ts
+```
 
 Chaque dossier est organisé pour séparer clairement les responsabilités (API, UI, logique métier, configuration, etc.), facilitant ainsi la maintenance et l'évolution du projet.
 
